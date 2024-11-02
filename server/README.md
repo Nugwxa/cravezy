@@ -2,11 +2,11 @@
 
 ## Getting Started
 
-To run the project' backend locally, follow these steps:
+To run the project's backend locally, follow these steps:
 
 ### Installation
 
-1. Clone the repo:
+1. Clone the repo(optional):
 
    ```bash
    git clone https://github.com/Nugwxa/chefs-kitchen.git

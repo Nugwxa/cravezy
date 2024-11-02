@@ -1,5 +1,5 @@
 {
-  "name": "chefs-kitchen",
+  "name": "chefs-kitchen-server",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "@prisma/client": "^5.19.1",
+    "chefs-kitchen-server": "file:",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "event-management-platform-api": "file:",
