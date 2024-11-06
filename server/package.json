@@ -32,7 +32,6 @@
     "chefs-kitchen-server": "file:",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
-    "event-management-platform-api": "file:",
     "express": "^4.21.1",
     "rimraf": "^6.0.1"
   }
