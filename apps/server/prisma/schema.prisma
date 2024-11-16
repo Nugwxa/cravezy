@@ -8,8 +8,16 @@ datasource db {
   directUrl = env("DIRECT_URL")
 }
 
+enum Role {
+  MANAGER
+  EMPLOYEE
+}
+
 model User {
-  id    String  @id @default(uuid())
-  name  String?
-  email String  @unique
+  id               String   @id @default(uuid())
+  name             String?
+  email            String   @unique
+  role             Role     @default(EMPLOYEE)
+  isActive         Boolean  @default(true)
+  registrationDate DateTime @default(now())
 }
