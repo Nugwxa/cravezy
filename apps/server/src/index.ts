@@ -1,6 +1,7 @@
-import express, { NextFunction, Request, Response } from 'express'
+import { supabase } from './lib/supabase'
 import cors, { CorsOptions } from 'cors'
 import dotenv from 'dotenv'
+import express, { NextFunction, Request, Response } from 'express'
 
 // Load environment variables from .env file
 dotenv.config()
@@ -35,9 +36,11 @@ app.use((err: Error, _req: Request, res: Response, next: NextFunction) => {
   }
 })
 
-app.get('/test/:userId', (req, res) => {
+app.get('/test/:userId', async (req, res) => {
   const { userId } = req.params
-  res.status(201).send({ id: 'sui', userId })
+
+  const superBase = await supabase.from('User').select('*')
+  res.status(201).send({ id: 'sui', userId, res: superBase })
 })
 
 app.listen(port, () => {
