@@ -1,11 +1,9 @@
 {
   "files": [],
+  "extends": "@shared/typescript-config/base.json",
 
   "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    "baseUrl": "./"
   },
   "references": [
     { "path": "./tsconfig.app.json" },

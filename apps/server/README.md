@@ -9,13 +9,13 @@ To run the project's backend locally, follow these steps:
 1. Clone the repo(optional):
 
    ```bash
-   git clone https://github.com/Nugwxa/chefs-kitchen.git
+   git clone https://github.com/Nugwxa/cravezy.git
    ```
 
 2. Change to the server directory:
 
    ```bash
-   cd chefs-kitchen/server
+   cd cravezy/apps/server
    ```
 
 3. Install dependencies:

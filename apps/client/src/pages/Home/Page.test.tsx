@@ -8,7 +8,7 @@ describe('App', () => {
     render(<HomePage />)
 
     expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(
-      "Chef's Kitchen"
+      'Cravezy'
     )
   })
 })

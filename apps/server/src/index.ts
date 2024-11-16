@@ -1,4 +1,4 @@
-import express, { Express, NextFunction, Request, Response } from 'express'
+import express, { NextFunction, Request, Response } from 'express'
 import cors, { CorsOptions } from 'cors'
 import dotenv from 'dotenv'
 
@@ -27,7 +27,7 @@ const corsOptions: CorsOptions = {
 app.use(cors(corsOptions))
 
 // Error handling middleware for CORS errors
-app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
+app.use((err: Error, _req: Request, res: Response, next: NextFunction) => {
   if (err.message === 'Not allowed by CORS') {
     res.status(403).send('CORS Error: Origin not allowed')
   } else {

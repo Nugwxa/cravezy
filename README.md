@@ -1,3 +1,3 @@
-# Chef's Kitchen
+# Cravezy
 
-Takeaway ordering platform
+A takeaway ordering platform

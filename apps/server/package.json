@@ -1,9 +1,10 @@
 {
-  "name": "chefs-kitchen-server",
+  "name": "cravezy-server",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "test:watch": "jest --watch",
     "build": "rimraf dist && npx tsc",
     "prestart": "npm run build",
     "start": "ts-node dist/index.js",
@@ -29,8 +30,8 @@
   },
   "dependencies": {
     "@prisma/client": "^5.19.1",
-    "chefs-kitchen-server": "file:",
     "cors": "^2.8.5",
+    "@shared/typescript-config": "^0.0.0",
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
     "rimraf": "^6.0.1"
