@@ -47,7 +47,6 @@ app.use((err: Error, _req: Request, res: Response, next: NextFunction) => {
         .status(401)
         .json({ success: false, message: 'CORS Error: Origin not allowed' })
     } else {
-      console.error(err.message)
       res
         .status(500)
         .json({ success: false, message: 'Unexpected server error' })
