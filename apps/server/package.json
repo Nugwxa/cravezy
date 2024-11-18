@@ -32,7 +32,10 @@
   },
   "dependencies": {
     "@prisma/client": "^5.19.1",
+    "@shared/schemas": "^1.0.0",
+    "@shared/types": "^1.0.0",
     "@shared/typescript-config": "^0.0.0",
+    "@shared/utils": "^1.0.0",
     "@supabase/supabase-js": "^2.46.1",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
