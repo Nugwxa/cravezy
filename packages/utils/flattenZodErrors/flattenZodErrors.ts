@@ -1,5 +1,5 @@
 /**
- * Recursively flattens the error object returned by Zod's `.format()` method into a single array of error messages.
+ * Iteratively flattens the error object using a breadth-first traversal to collect all error messages.
  *
  * @param {any} errorObj - The formatted error object returned by Zod.
  * @returns {string[]} - An array of all error messages collected from the `errorObj`, including nested errors.
