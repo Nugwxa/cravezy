@@ -18,6 +18,7 @@ export interface UserDTO {
 export interface CreateUserDTO extends Pick<UserDTO, 'name' | 'email'> {
   role?: UserRole
   isActive?: boolean
+  password: string
 }
 
 export interface UpdateUserDTO
