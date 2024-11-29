@@ -21,7 +21,7 @@ export default async function verifyCaptchaToken(
   try {
     // Send the token to the backend to validate it
     const response = await fetch(
-      `${process.env.API_HOST_URL}/captcha/validate`,
+      `${import.meta.env.VITE_API_HOST_URL}/captcha/validate`,
       {
         method: 'POST',
         headers: { 'Content-type': 'application/json' },
@@ -46,10 +46,11 @@ export default async function verifyCaptchaToken(
       success: true,
       message: 'Token is valid 👍',
     }
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (e) {
     return {
       success: false,
-      message: `Unexpected error while verifying captcha token: ${e instanceof Error ? e.message : String(e)}`,
+      message: 'Captcha validation failed',
     }
   }
 }
