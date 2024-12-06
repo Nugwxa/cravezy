@@ -33,7 +33,6 @@ export default function useFormHandler<T = unknown>(
     try {
       const response = await formAction(formData)
       setFormState(response)
-      console.log(formState)
     } finally {
       setIsLoading(false)
     }
