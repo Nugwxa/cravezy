@@ -1,0 +1,47 @@
+.button {
+  align-items: center;
+  background-color: var(--accent-10);
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  font: inherit;
+  font-weight: 400;
+  gap: 10px;
+  justify-content: center;
+  margin: unset;
+  padding: 13px;
+  width: fit-content;
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  &Icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.isWide {
+  width: 100%;
+}
+
+.isBold {
+  font-weight: 600;
+}
+
+.strokeButton {
+  background-color: transparent;
+  // color: $blue-2;
+  border: 1px solid currentColor;
+}
+
+.transparentButton {
+  background-color: transparent;
+  padding: 5px;
+}
