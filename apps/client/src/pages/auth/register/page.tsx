@@ -86,7 +86,7 @@ export default function RegistrationPage(): JSX.Element {
 
         {/* Verification Code */}
         <div className={styles.inputWrapper}>
-          <label htmlFor="verification-code">
+          <label htmlFor="verificationToken">
             Verification Code <Required />
           </label>
           <input
