@@ -1,6 +1,6 @@
 import { FormEvent, useState } from 'react'
 import { useCaptcha } from '@/hooks/captcha/useCaptcha'
-import CaptchaProvider from '@/components/CaptchaProvider'
+import CaptchaProvider from '@/components/Forms/CaptchaProvider'
 
 export default function TestPage() {
   const { captchaToken, setCaptchaToken, captchaError, validateCaptcha } =
