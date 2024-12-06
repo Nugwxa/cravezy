@@ -5,6 +5,7 @@ import { createBrowserRouter } from 'react-router-dom'
 import { HomePage } from '@/pages/Home'
 import { TestPage } from '@/pages/Test'
 import NotFound from '@/pages/NotFound'
+import RegistrationPage from '@/pages/auth/register'
 
 // Layouts
 import AuthLayout from '@/layouts/AuthLayout'
@@ -19,12 +20,8 @@ const appRouter = createBrowserRouter([
     element: <AuthLayout />,
     children: [
       {
-        path: 'test',
-        element: (
-          <>
-            <h1>Test Auth Page</h1>
-          </>
-        ),
+        path: 'register',
+        element: <RegistrationPage />,
       },
       { index: true, element: <NotFound /> },
     ],

@@ -61,3 +61,26 @@ h3,
 h4 {
   font-family: var(--heading-font);
 }
+
+input {
+  border: 1px solid var(--accent-5);
+  border-radius: var(--space-1);
+  font-family: inherit;
+  font-size: 1rem;
+  padding: var(--space-3);
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    border-color: var(--accent-7);
+  }
+
+  &::placeholder {
+    color: inherit;
+    opacity: 0.5;
+  }
+
+  &:focus {
+    border-color: var(--pink-7);
+    outline: none;
+  }
+}
