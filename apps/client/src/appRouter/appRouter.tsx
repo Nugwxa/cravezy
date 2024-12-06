@@ -17,17 +17,7 @@ const appRouter = createBrowserRouter([
   {
     path: '/auth',
     element: <AuthLayout />,
-    children: [
-      {
-        path: 'test',
-        element: (
-          <>
-            <h1>Test Auth Page</h1>
-          </>
-        ),
-      },
-      { index: true, element: <NotFound /> },
-    ],
+    children: [{ index: true, element: <NotFound /> }],
   },
   { path: '/test', element: <TestPage /> },
   {
