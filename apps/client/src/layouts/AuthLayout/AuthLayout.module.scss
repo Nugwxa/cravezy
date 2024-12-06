@@ -1,0 +1,34 @@
+.authPage {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+.authLayout {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: var(--space-4);
+  &Panel {
+    align-items: center;
+    background-color: var(--accent-1);
+    border: 1px solid var(--accent-3);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+    justify-content: center;
+    padding: var(--space-5);
+    width: min(100%, 500px);
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 900;
+      text-align: center;
+      text-transform: uppercase;
+      @media (max-width: 380px) {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
