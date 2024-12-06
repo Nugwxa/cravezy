@@ -14,7 +14,7 @@ createRoot(document.getElementById('root')!).render(
     <ThemeProvider
       className="themeProvider"
       hasBackground={false}
-      accentColor="pink"
+      accentColor="gray"
     >
       <RouterProvider router={appRouter} />
     </ThemeProvider>
