@@ -48,7 +48,7 @@ export default async function createUserHandler(
         success: false,
         statusCode: response.statusCode,
         message: response.message,
-        errors: [],
+        errors: response.errors,
       })
 
     return res.status(201).json({
