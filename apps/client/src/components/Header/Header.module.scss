@@ -1,0 +1,30 @@
+.header {
+  align-items: center;
+  background-color: var(--accent-1);
+  border-bottom: 1px solid var(--accent-3);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  &Container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: var(--space-4);
+    width: 100%;
+  }
+}
+
+.logoWrapper {
+  align-items: center;
+  display: flex;
+  gap: var(--space-1);
+
+  &Text {
+    color: var(--accent-10);
+    font-family: var(--heading-font);
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+}
