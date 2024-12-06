@@ -10,6 +10,7 @@ export default function CaptchaProvider(props: Readonly<CaptchaProviderProps>) {
 
   return (
     <ReCAPTCHA
+      style={{ transform: 'scale(0.85)', transformOrigin: '0 0' }}
       sitekey={siteKey}
       onChange={onTokenChange}
       onExpired={() => {
