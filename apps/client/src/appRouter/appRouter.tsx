@@ -4,6 +4,7 @@ import { createBrowserRouter } from 'react-router-dom'
 // Pages
 import { HomePage } from '@/pages/Home'
 import { TestPage } from '@/pages/Test'
+import LoginPage from '@/pages/auth/login'
 import NotFound from '@/pages/NotFound'
 import RegistrationPage from '@/pages/auth/register'
 
@@ -22,6 +23,10 @@ const appRouter = createBrowserRouter([
       {
         path: 'register',
         element: <RegistrationPage />,
+      },
+      {
+        path: 'login',
+        element: <LoginPage />,
       },
       { index: true, element: <NotFound /> },
     ],
