@@ -68,7 +68,7 @@ export default function LoginPage() {
       {!isLoading && <FormCallout formState={formState} />}
 
       <div>
-        Don't have an account? <Link to={'/auth/register'}>Login</Link>
+        Don't have an account? <Link to={'/auth/register'}>Register</Link>
       </div>
     </>
   )
