@@ -11,6 +11,7 @@ const corsOptions: CorsOptions = {
       callback(new Error('Not allowed by CORS'))
     }
   },
+  credentials: true,
 }
 
 export const configureCors = cors(corsOptions)
