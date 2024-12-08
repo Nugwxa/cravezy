@@ -40,7 +40,7 @@ export default async function countUsers(
     // Build where clause
     const where = {
       ...(id && { id }),
-      ...(id && { email }),
+      ...(email && { email }),
     }
 
     // Build pagination options
