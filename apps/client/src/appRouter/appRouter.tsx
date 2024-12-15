@@ -4,6 +4,7 @@ import { createBrowserRouter } from 'react-router-dom'
 // Pages
 import { HomePage } from '@/pages/Home'
 import { TestPage } from '@/pages/Test'
+import ForgotPasswordPage from '@/pages/auth/forgot-password'
 import LoginPage from '@/pages/auth/login'
 import NotFound from '@/pages/NotFound'
 import RegistrationPage from '@/pages/auth/register'
@@ -27,6 +28,10 @@ const appRouter = createBrowserRouter([
       {
         path: 'login',
         element: <LoginPage />,
+      },
+      {
+        path: 'forgot-password',
+        element: <ForgotPasswordPage />,
       },
       { index: true, element: <NotFound /> },
     ],
