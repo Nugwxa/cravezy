@@ -18,7 +18,16 @@ export default async function readSession(
 
     // Handle potential Supabase auth errors
     if (supabaseError) {
-      console.log(supabaseError.message)
+      console.log(supabaseError.code)
+
+      if (supabaseError.code === 'bad_jwt') {
+        return {
+          statusCode: 400,
+          success: false,
+          data: null,
+          message: 'Invalid token',
+        }
+      }
       throw new Error(`Database session read error`)
     }
 
