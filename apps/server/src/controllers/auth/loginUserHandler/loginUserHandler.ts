@@ -30,11 +30,18 @@ export default async function loginUserHandler(
 
     // Set a cookie with user's session data if the login succeeds
     if (response.success) {
-      res.cookie('craveCookie', response.data, {
+      res.cookie('craveCookie', response.data!.accessToken, {
         httpOnly: true,
         secure: process.env.NODE_ENV === 'production',
         maxAge: 60 * 60 * 24 * 1000, // Expire after a day
         sameSite: 'strict',
+      })
+
+      res.cookie('refreshToken', response.data!.refreshToken, {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === 'production',
+        sameSite: 'strict',
+        maxAge: 60 * 60 * 24 * 7 * 1000, // 7 days
       })
     }
 
