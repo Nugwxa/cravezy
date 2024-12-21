@@ -6,9 +6,13 @@ interface LoginUserParams {
   password: string
 }
 
+interface SessionData {
+  accessToken: string
+  refreshToken: string
+}
 export default async function loginUser(
   props: Readonly<LoginUserParams>
-): Promise<ApiResponse<string, string>> {
+): Promise<ApiResponse<SessionData, string>> {
   const { password, email } = props
   try {
     const { data, error: supabaseError } =
@@ -29,13 +33,16 @@ export default async function loginUser(
       throw new Error(`Database user login error: ${supabaseError.message}`)
     }
 
-    const token = data.session.access_token
+    const session = data.session
 
     return {
       statusCode: 200,
       success: true,
       message: 'Logged In',
-      data: token,
+      data: {
+        accessToken: session.access_token,
+        refreshToken: session.refresh_token,
+      },
     }
   } catch (e) {
     const errorMessage = e instanceof Error ? e.message : String(e)
