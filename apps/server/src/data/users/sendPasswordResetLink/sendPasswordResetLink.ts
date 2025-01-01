@@ -31,11 +31,15 @@ export default async function sendPasswordResetLink(
     if (userResponse.data > 0) {
       const { error: supabaseError } =
         await supabase.auth.resetPasswordForEmail(email, {
-          redirectTo: `${process.env.SERVER_URL}/auth/password-reset/confirm`,
+          redirectTo: `${process.env.CLIENT_URL}/auth/forgot-password/verify`,
         })
 
       // Handle potential Supabase auth errors
       if (supabaseError) {
+        console.log(
+          'Supabase error while sending password reset link',
+          supabaseError
+        )
         throw new Error(`Database password reset error`)
       }
     }
