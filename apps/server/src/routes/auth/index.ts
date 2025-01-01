@@ -3,6 +3,7 @@ import express from 'express'
 import loginUserHandler from '@/controllers/auth/loginUserHandler'
 import passwordResetRequestHandler from '@/controllers/auth/passwordResetRequestHandler'
 import readSessionHandler from '@/controllers/auth/readSessionHandler'
+import passwordResetTokenVerificationHandler from '@/controllers/auth/passwordResetTokenVerificationHandler'
 
 const authRouter = express.Router()
 
@@ -14,5 +15,6 @@ authRouter.get('/session', authenticationMiddleware, readSessionHandler)
 
 // User
 authRouter.post('/password-reset', passwordResetRequestHandler)
+authRouter.get('/password/reset', passwordResetTokenVerificationHandler)
 
 export default authRouter
